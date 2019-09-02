@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 
 public class BasePage {
 
-    WebDriver driver;
-    WebDriverController webDriverController;
+    private WebDriver driver;
+    private WebDriverController webDriverController;
 
 
     public BasePage(WebDriverController webDriverController){
@@ -17,21 +17,21 @@ public class BasePage {
     }
 
 
-    public void Visit(String url){
+    public void visit(String url){
         driver.get(url);
     }
 
-    public WebElement Find(By locator){
+    public WebElement find(By locator){
         return driver.findElement(locator);
     }
 
-    public void Click(By locator){
-        Find(locator).click();
+    public void click(By locator){
+        find(locator).click();
     }
 
-    protected void ClearAndTypeIntoField(By locator, String inputText){
-        Find(locator).clear();
-        Find(locator).sendKeys(inputText);
+    protected void clearAndTypeIntoField(By locator, String inputText){
+        find(locator).clear();
+        find(locator).sendKeys(inputText);
     }
 
 }

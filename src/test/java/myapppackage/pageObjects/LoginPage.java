@@ -28,15 +28,15 @@ public class LoginPage extends BasePage {
     }
 
     public void EnterUsername(String username){
-        ClearAndTypeIntoField(usernameField,username);
+        clearAndTypeIntoField(usernameField,username);
     }
 
     public void EnterPassword(String password){
-        ClearAndTypeIntoField(passwordField, password);
+        clearAndTypeIntoField(passwordField, password);
     }
 
     public void ClickLoginButton(){
-        Click(loginButton);
+        click(loginButton);
     }
 
     public String GetCurrentUrl(){
